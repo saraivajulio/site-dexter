@@ -1,91 +1,66 @@
-    <header class="header">
-        <?php  require 'template/topo.php'; ?>
-    </header>
-    <?php
-        $banners = array(
-        	array(
-                'id' => 1,
-                'nome' => 'Logística Integrada',
-        	    'descricao' => 'Dexter Courier - É uma empresa de logística que preza a qualidade de serviço. Seu principal objetivo é prestar serviços de coleta e entrega com rapidez e qualidade, garantindo que seu produto, objeto, documento ou seja lá o que for, chegue ao local de destino intacto, em segurança e no tempo desejado.',
-        	    'url' => 'img/banner/banner.jpg'
-            ),
+<?php
+require('header.php');
+?>
+	<div id="grid_content">
+		<div class="main_content">
+			<?php require('menu.php'); ?>
+			<h1>Coletas em Andamento</h1>
+			<table cellpadding="0" cellspacing="0" border="0" class="tabela">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Pedido</th>
+						<th>Cliente</th>
+						<th>Telefone</th>
+						<th>Coleta</th>
+						<th>Valor</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>99872</td>
+						<td><a href="4linux.php">4Linux</a></td>
+						<td>(11) 2125-4747</td>
+						<td>Apostilas</td>
+						<td>120,00</td>
+						<td>Aguardando Carro</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>99873</td>
+						<td><a href="cliente.php">Dee Dee Turismo</a></td>
+						<td>(11) 2125-4747</td>
+						<td>Malote Banco</td>
+						<td>30,00</td>
+						<td>Aguardando Carro</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>99874</td>
+						<td><a href="cliente.php">Levinsky Corretora</a></td>
+						<td>(11) 2125-4747</td>
+						<td>Cartorio</td>
+						<td>30,00</td>
+						<td>Em viagem</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>99875</td>
+						<td><a href="cliente.php">Mordechai Advogados</a></td>
+						<td>(11) 2125-4747</td>
+						<td>Docs TST</td>
+						<td>30,00</td>
+						<td>Em viagem</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+<?php require('sidebar.php'); ?>
+</div>
 
-            array(
-                'id' => 2,
-                'nome' => 'Soluções em Transporte',
-                'descricao' => 'Mea id prima munere. Facer everti pro ex, nam no malis quodsi. Option delicata corrumpit an usu, quodsi equidem percipit vix cu, dolor periculis et pri. Id sea corpora phaedrum, no est rebum illud mollis. Et vel veri autem, nec alia dicit ex, eu vis dicant labores legimus',
-                'url' => 'img/banner/banner2.jpg'
-            ),
-
-            array(
-                'id' => 3,
-                'nome' => 'Terminais Marítimos',
-                'descricao' => 'Cum simul mandamus no, sea veniam honestatis eu. Mucius nostrud ea quo, ius an dicunt eloquentiam, fabulas expetendis per ex. Liber definitionem eu nam. Cu pro dicit utamur conclusionemque, no vis audire maiestatis scribentur.',
-                'url' => 'img/banner/banner3.jpg'
-            ),
-
-            array(
-                'id' => 4,
-                'nome' => 'Dexter - Logística',
-                'descricao' => 'Mel habeo homero commune te. Nostrud accumsan oporteat mea ex. Lorem ullum mei ne, duo ei amet primis incorrupte. Eos te alienum molestiae, iriure atomorum ei has.',
-                'url' => 'img/banner/banner4.jpg'
-            ),
-
-
-        )
-    ?>
-    <section class="banner">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-          <!-- Wrapper for slides -->
-
-          <div class="carousel-inner">
-            <?php foreach ($banners as $banner): ?>
-                <div class="item <?php echo ($banner['id']==1) ? 'active' : ''?>" style="background-image:url('<?php echo $banner['url']; ?>')">
-                  <div class="container">
-                    <div class="row">
-                        <div class="span12">
-                            <h2><?php echo $banner['nome']; ?></h2>
-                            <p><?php echo $banner['descricao']; ?></p>
-                        </div>
-                    </div>
-                  </div>
-               </div>
-           <?php endforeach;?>
-         </div>
-
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-        </div>
-    </section>
-
-    <section class="vantagens">
-        <?php require 'template/vantagens.php' ?>
-    </section>
-
-    <section class="funcionalidades">
-        <?php require 'template/funcionalidades.php' ?>
-    </section>
-
-    <section class="cadastro">
-        <div class="container">
-            <div class="left">
-                <h3>Você cuida da sua empresa e nós da sua logistica.</h3>
-                <p>Cadastre-se agora e tenha 20% de desconto no primeiro ano.</p>
-            </div>
-            <a href="cadastro.php" class="btn btn-flat right">Cadastre-se</a>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <?php require 'template/rodape.php' ?>
-    </footer>
-
-</body>
-
-</html>
+<?php
+require('footer.php');
+?>
